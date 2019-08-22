@@ -1,0 +1,26 @@
+{
+  "name": "__PROJECT-NAME-HERE__",
+  "version": "0.1.0",
+  "license": "WTFPL",
+  "description": "__PROJECT-DESCRIPTION-HERE__",
+  "author": "__AUTHOR-NAME-HERE__",
+  "repository": {
+    "type": "git",
+    "url": "__PROJECT-REPOSITORY-URL-HERE__"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "nps build",
+    "test": "nps test",
+    "bump": "nps bump",
+    "prepare": "nps prepare"
+  },
+  "devDependencies": {
+    "@darkobits/ts-unified": "^3.2.3",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.5"
+  }
+}
