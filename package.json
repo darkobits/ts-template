@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@darkobits/ts-unified": "^3.2.3",
-    "@types/jest": "^24.0.21",
+    "@types/jest": "^24.9.1",
     "@types/node": "^12.12.5"
   }
 }
