@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": ["src", "*.config.ts"],
+  "exclude": ["dist/**", "node_modules"]
+}
