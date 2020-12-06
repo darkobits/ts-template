@@ -1,0 +1,49 @@
+name: ci
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+env:
+  FORCE_COLOR: 3
+concurrency:
+  group: ${{ github.ref }}
+  # Only cancel concurrent builds when we are not on the default branch. This
+  # way, if a commit breaks the default branch, we can more easily determine
+  # which commit caused the failure.
+  cancel-in-progress: ${{ github.ref != github.event.repository.default_branch }}
+jobs:
+  ci:
+    name: CI
+    # Skip building tags; an identical job for the commit to which the tag
+    # points will be triggered, making tag-based jobs superfluous.
+    if: github.ref_type != 'tag'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test:coverage
+
+      - name: Build
+        run: pnpm build
