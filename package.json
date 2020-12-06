@@ -1,0 +1,28 @@
+{
+  "name": "__ADD_PROJECT_NAME__",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "Hippocratic",
+  "description": "__ADD_PROJECT_DESCRIPTION__",
+  "author": "__ADD_AUTHOR__",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "__ADD_REPOSITORY_URL__"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "nr prepare",
+    "help": "nr --scripts"
+  },
+  "devDependencies": {
+    "@darkobits/ts": "~0.17.0"
+  }
+}
