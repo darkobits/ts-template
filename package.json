@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "project-name",
+  "version": "0.1.0",
+  "license": "WTFPL",
+  "description": "PROJECT_DESCRIPTION",
+  "author": "AUTHOR_NAME",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "REPOSITORY_URL"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "nr prepare",
+    "help": "nr --scripts"
+  },
+  "devDependencies": {
+    "@darkobits/eslint-plugin": "^0.2.9",
+    "@darkobits/ts": "^0.12.4"
+  }
+}
