@@ -22,7 +22,7 @@
     "help": "nr --scripts"
   },
   "devDependencies": {
-    "@darkobits/eslint-plugin": "^0.2.9",
+    "@darkobits/eslint-plugin": "^0.2.10",
     "@darkobits/ts": "^0.12.4"
   }
 }
