@@ -23,6 +23,6 @@
     "help": "nr --scripts"
   },
   "devDependencies": {
-    "@darkobits/ts": "~0.15.2"
+    "@darkobits/ts": "~0.15.4"
   }
 }
