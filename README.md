@@ -1,6 +1,9 @@
-<p align="center">
-  <a href="https://stackblitz.com/github/darkobits/ts-template"><img src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"></a>
-</p>
+Welcome to the Codesandbox for `ts-template`! Here are some
+common package scripts to get started:
 
-This is a **template repository** that can be used to quickly bootstrap new
-projects using `tsdown`, `eslint`, and `vitest`.
+| Script         | Description                                |
+| -------------- | ------------------------------------------ |
+| `pnpm install` | Install dependencies.                      |
+| `pnpm build`   | Build with [`tsdown`](https://tsdown.dev). |
+| `pnpm lint`    | Lint with [`eslint`](https://eslint.org).  |
+| `pnpm test`    | Test with [`vitest`](https://vitest.dev).  |
