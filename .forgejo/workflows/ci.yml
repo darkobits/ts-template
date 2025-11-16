@@ -1,0 +1,45 @@
+# See: https://forgejo.org/docs/next/user/actions/github-actions
+name: ci
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+env:
+  FORCE_COLOR: 3
+# concurrency:
+  # group: ${{ github.ref }}
+  # cancel-in-progress: ${{ github.ref != github.event.repository.default_branch }}
+jobs:
+  ci:
+    name: CI
+    # if: github.ref_type != 'tag'
+    runs-on: docker
+    steps:
+      - name: Clone
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test:coverage
+
+      - name: Build
+        run: pnpm build
