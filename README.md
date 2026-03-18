@@ -1,6 +1,6 @@
 > [!WARNING]
-> Consult [`AGELESS.md`](./AGELESS.md) to determine if you are permitted to use
-> this software where you live.
+> Consult [`AGELESS`](./AGELESS) to determine if you are permitted to use this
+> software where you live.
 
 This is a template repository that can be used to quickly bootstrap new Node
 libraries. The minimal but robust toolchain consists of [`tsdown`][tsdown],
